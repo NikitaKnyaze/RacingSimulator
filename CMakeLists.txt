@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.22.0)
+project(Race_Sim)
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+add_library(VehicleLib SHARED Boots.h Boots.cpp broomstick_vehicl.h broomstick_vehicl.cpp Camel_vehicl.h Camel_vehicl.cpp Carpet_Plane.h Carpet_Plane.cpp Cent.h Cent.cpp eagle_vehicl.h eagle_vehicl.cpp Evehicles.h Fast_Camel.h Fast_Camel.cpp Race.h Race.cpp)
+add_executable(Race_Exe RacingSimulator.cpp)
+target_link_libraries(Race_Exe VehicleLib)
